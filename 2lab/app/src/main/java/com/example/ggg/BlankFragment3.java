@@ -72,18 +72,18 @@ public class BlankFragment3 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-        return inflater.inflate(R.layout.fragment_blank3, container, false);
+        TableLayout table = new TableLayout(getActivity());
 
-    }
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        TableLayout tableLayout = (TableLayout)view.findViewById(R.id.tableLayoutForm);
-        tableLayout.setPadding(10, 10, 10, 10);
-        final String[] textToThirdTab = new String[]{"понедельник","вторник","среда","четверг","пятница","суббота","воскресенье"};
-        for(int i = 0 ; i < 7;i++){
-            TableRow row= new TableRow();
+        for (int i = 1; i <= 10; i++) {
+            TableRow row = new TableRow(getActivity());
+            for (int j = 1; j <= 10; j++) {
+                TextView tv = new TextView(getActivity());
+                tv.setText(String.valueOf(i * j));
+                row.addView(tv);
+            }
+            table.addView(row);
         }
+        return table;
     }
 }

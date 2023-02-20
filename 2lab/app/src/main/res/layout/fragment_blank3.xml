@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/TableLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BlankFragment3">
@@ -9,14 +10,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
         <TableLayout
+            android:id="@+id/lv"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" android:id="@+id/tableLayoutForm"
-            tools:ignore="UselessParent">
-            <TableRow android:layout_width="match_parent" android:layout_height="match_parent"/>
-            <TableRow android:layout_width="match_parent" android:layout_height="match_parent"/>
-        </TableLayout>
+            android:layout_height="match_parent">
 
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </TableLayout>
     </RelativeLayout>
 </FrameLayout>
